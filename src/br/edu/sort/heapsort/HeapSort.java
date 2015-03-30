@@ -17,12 +17,14 @@ public class HeapSort extends SortAlgorithm {
 
 	public int[] sort(int[] data) throws SortAlgorithmException {
 
-		if (data == null)
+		if (data == null) {
 			throw new SortAlgorithmException(SortAlgorithmErrorCode.DataNullNotAllowed);
-
-		if (data.length == 0)
+		}
+		
+		if (data.length == 0) {
 			throw new SortAlgorithmException(SortAlgorithmErrorCode.ZeroLenghtDataNotAllowed);
-
+		}
+		
 		buildheap(data);
 		for (int i = data.length - 1; i >= 0; i--) {
 			exchange(data, i, 0);
