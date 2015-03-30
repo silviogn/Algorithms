@@ -1,4 +1,4 @@
-package br.edu.heapsort;
+package br.edu.sort.heapsort;
 
 import br.edu.sortalgorithm.SortAlgorithm;
 import br.edu.sortalgorithm.SortAlgorithmErrorCode;
@@ -31,8 +31,7 @@ public class HeapSort extends SortAlgorithm {
 		return data;
 	}
 
-	private HeapSort() {
-	}
+	private HeapSort() {}
 
 	private void heapify(int[] data, int size, int i) {
 		int left = ((2 * i) + 1);

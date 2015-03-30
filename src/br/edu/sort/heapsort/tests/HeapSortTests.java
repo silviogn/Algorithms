@@ -1,11 +1,14 @@
-package br.edu.heapsort.tests;
+package br.edu.sort.heapsort.tests;
 
 import static org.junit.Assert.*;
+
 import java.util.Random;
+
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import br.edu.heapsort.HeapSort;
+
+import br.edu.sort.heapsort.HeapSort;
 import br.edu.sortalgorithm.SortAlgorithmException;
 
 public class HeapSortTests {

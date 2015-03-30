@@ -1,4 +1,4 @@
-package br.edu.insertionsort;
+package br.edu.sort.insertionsort;
 
 public class InsertionSort {
 
