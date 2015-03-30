@@ -1,4 +1,6 @@
-package br.edu.sortalgorithm;
+package br.edu.sort.base;
+
+import br.edu.sort.exception.SortAlgorithmException;
 
 
 public abstract class SortAlgorithm implements ISorteableAlgorithm {	

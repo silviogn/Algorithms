@@ -1,4 +1,4 @@
-package br.edu.sortalgorithm;
+package br.edu.sort.exception;
 
 public enum SortAlgorithmErrorCode {
 	DataNullNotAllowed,

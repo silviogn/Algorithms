@@ -8,8 +8,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import br.edu.sort.exception.SortAlgorithmException;
 import br.edu.sort.heapsort.HeapSort;
-import br.edu.sortalgorithm.SortAlgorithmException;
 
 public class HeapSortTests {
 

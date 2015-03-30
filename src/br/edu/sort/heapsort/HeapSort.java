@@ -1,8 +1,8 @@
 package br.edu.sort.heapsort;
 
-import br.edu.sortalgorithm.SortAlgorithm;
-import br.edu.sortalgorithm.SortAlgorithmErrorCode;
-import br.edu.sortalgorithm.SortAlgorithmException;
+import br.edu.sort.base.SortAlgorithm;
+import br.edu.sort.exception.SortAlgorithmErrorCode;
+import br.edu.sort.exception.SortAlgorithmException;
 
 public class HeapSort extends SortAlgorithm {
 
