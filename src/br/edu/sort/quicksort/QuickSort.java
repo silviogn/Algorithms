@@ -4,7 +4,7 @@ import br.edu.sort.base.SortAlgorithm;
 import br.edu.sort.exception.SortAlgorithmErrorCode;
 import br.edu.sort.exception.SortAlgorithmException;
 
-public class QuickSort extends  SortAlgorithm{
+public class QuickSort extends  SortAlgorithm { 
 	
 	private int[] divide(int low, int high, int[] data) {
 		if (low < high) {
