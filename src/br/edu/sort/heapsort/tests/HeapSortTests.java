@@ -37,12 +37,16 @@ public class HeapSortTests {
 
 		int[] dataSorted = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 15, 15, 16 };
 		int[] data = new int[] { 15, 16, 14, 2, 4, 15, 5, 6, 7, 15, 8, 9, 10, 11, 12, 13, 1, 3 };
-
 		data = HeapSort.Instance().sort(data);
-
+		boolean correct = true;
+		
 		for (int i = 0; i < data.length; i++) {
-			assertTrue(dataSorted[i] == data[i]);
+			if (dataSorted[i] != data[i]) {
+				correct = false;
+				break;
+			}
 		}
+		assertTrue(correct);
 	}
 
 	@Test
@@ -54,10 +58,13 @@ public class HeapSortTests {
 		}
 
 		data = HeapSort.Instance().sort(data);
-
+		boolean correct = true;
 		for (int i = 0; i < data.length - 1; i++) {
-			assertTrue(data[i] <= data[i + 1]);
+			if (data[i]>data[i+1]){
+				correct = false;
+				break;
+			}
 		}
-
+		assertTrue(correct);
 	}
 }
