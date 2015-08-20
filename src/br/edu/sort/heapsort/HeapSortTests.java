@@ -1,4 +1,4 @@
-package br.edu.sort.heapsort.tests;
+package br.edu.sort.heapsort;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import br.edu.sort.exception.SortAlgorithmException;
-import br.edu.sort.heapsort.HeapSort;
 
 public class HeapSortTests {
 

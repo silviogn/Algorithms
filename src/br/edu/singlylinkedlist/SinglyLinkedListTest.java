@@ -1,11 +1,8 @@
-package br.edu.singlylinkedlist.test;
+package br.edu.singlylinkedlist;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
-
-import br.edu.singlylinkedlist.SinglyLinkedList;
 
 public class SinglyLinkedListTest {
 	
