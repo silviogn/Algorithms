@@ -1,8 +1,30 @@
 package br.edu.sort.insertionsort;
 
-public class InsertionSort {
+import br.edu.sort.base.SortAlgorithm;
+import br.edu.sort.exception.SortAlgorithmErrorCode;
+import br.edu.sort.exception.SortAlgorithmException;
 
-	public int[] sort(int[] data) {
+public class InsertionSort extends SortAlgorithm{
+
+	private InsertionSort() {
+		
+	}
+	
+	public static InsertionSort newInstance(){
+		return new InsertionSort();
+	}
+	
+	@Override
+	public int[] sort(int[] data) throws SortAlgorithmException {
+		
+		if (data == null) {
+			throw new SortAlgorithmException(SortAlgorithmErrorCode.DataNullNotAllowed);
+		}
+
+		if (data.length == 0) {
+			throw new SortAlgorithmException(SortAlgorithmErrorCode.ZeroLenghtDataNotAllowed); 
+		}
+
 		for (int i = 1; i < data.length; i++) {
 			int temp = data[i];
 			int j = i - 1;
