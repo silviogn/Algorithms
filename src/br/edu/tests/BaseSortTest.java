@@ -20,8 +20,8 @@ public class BaseSortTest {
 
 	@Before
 	public void setUpBeforeClass() throws Exception {
-		data = new int[10000];		
-		for (int i = 0; i < 10000; i++) {
+		data = new int[1000];		
+		for (int i = 0; i < 1000; i++) {
 			data[i] = random.nextInt();
 		}
 	}

@@ -4,29 +4,17 @@ import br.edu.sort.base.SortAlgorithm;
 import br.edu.sort.exception.SortAlgorithmErrorCode;
 import br.edu.sort.exception.SortAlgorithmException;
 
-public class QuickSort extends  SortAlgorithm { 
+public class QuickSort extends  SortAlgorithm {
 	
-	private int[] divide(int low, int high, int[] data) {
-		if (low < high) {
-			int pivot = partition(low, high, data);
-			divide(low, pivot - 1, data);
-			divide(pivot + 1, high, data);
-		}
-		return data;
+	private  QuickSort() {
+		// TODO Auto-generated constructor stub
 	}
- 
-	private int partition(int low, int high, int[] data) {
-		int wall = low - 1;
-		for (int j = low; j < high; j++) {
-			if (data[j] <= data[high]) {
-				wall++;
-				exchange(data, wall, j);
-			}
-		}
-		wall++;
-		exchange(data,wall, high);
-		return wall;
+	
+	
+	public static QuickSort newInstance(){
+		return new QuickSort();
 	}
+	
 
 	@Override
 	public int[] sort(int[] data) throws SortAlgorithmException {
@@ -38,7 +26,30 @@ public class QuickSort extends  SortAlgorithm {
 		if (data.length == 0){
 			throw new SortAlgorithmException(SortAlgorithmErrorCode.ZeroLenghtDataNotAllowed);
 		}
-		
-		return divide(0,data.length-1,data);
+		data = sort(data, 0, data.length-1);
+		return data;
+	} 
+	
+	private int[] sort(int[] data, int left, int right){
+		if (left < right){
+			int pivot = divide(data, left, right);
+			sort(data, left, pivot-1);
+			sort(data, pivot+1, right);
+		}
+		return data;
 	}
+	
+	private int divide(int data[], int left, int right){
+		int j = left - 1;
+		int i = left;
+		
+		while (i < right){
+			if (data[i] <= data[right]){
+				exchange(data, i, ++j);
+			}
+			i++;
+		}
+		exchange(data, right, ++j);
+		return j;
+	}	
 }
