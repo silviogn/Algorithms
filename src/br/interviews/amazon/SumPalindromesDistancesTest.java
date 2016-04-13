@@ -1,14 +1,11 @@
 package br.interviews.amazon;
 
 import static org.junit.Assert.*;
-
 import java.security.InvalidParameterException;
-
 import org.junit.Test;
 
 public class SumPalindromesDistancesTest {
 	
-
 	@Test 
 	public void verifyKnowdResultChallengeQuestion(){
 		assertTrue(SumPalindromesDistances.newInstance().calculateDistances(1, 1000000) == 495076635L);
@@ -25,8 +22,11 @@ public class SumPalindromesDistancesTest {
 	}
 	
 	@Test 
-	public void testeNumberSteo(){
-		System.out.println(SumPalindromesDistances.newInstance().calculateDistances(1, 1000000));
+	public void callangeNumberQuestion(){
+		long time = System.currentTimeMillis();
+		long number = SumPalindromesDistances.newInstance().calculateDistances(1, 1000000000000000000L);
+		time = System.currentTimeMillis() - time; 
+		System.out.println(number +" - "+time);
 	}	
 }
 

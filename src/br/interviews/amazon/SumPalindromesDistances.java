@@ -41,7 +41,7 @@ public class SumPalindromesDistances {
 	private int stepNumber(long number) {
 		int numberSize = getNumberSize(number);
 		int stepNumberTemp = 0;
-		int step;
+		int step = 0;
 		
 		if (numberSize == 1) {
 			return 1;
@@ -76,15 +76,15 @@ public class SumPalindromesDistances {
 			return next;
 		}
 
-		char[] cActual = String.valueOf(actual).toCharArray();
-		char[] cSecond = String.valueOf(next).toCharArray();
+		char[] actualPalindrome = String.valueOf(actual).toCharArray();
+		char[] nextPalindrome = String.valueOf(next).toCharArray();
 
-		int fator = 11;
+		int factor = 11;
 		for (int i = 0; i < iteration; i++) {
-			if (cActual[i] != cSecond[i]) {
-				return fator + actual;
+			if (actualPalindrome[i] != nextPalindrome[i]) {
+				return factor + actual;
 			}
-			fator = fator * 10;
+			factor = factor * 10;
 		}
 		return next;
 	}
@@ -100,6 +100,9 @@ public class SumPalindromesDistances {
 		return totaldistance;
 	}
 
+	/**
+	 * Return the sum of distances between two numbers. 
+	 */
 	private long getSumDistaces(long prior, long next) {
 		long distance = next - prior;
 		Long sumDistance = distancesSumList.get(distance);
@@ -132,21 +135,16 @@ public class SumPalindromesDistances {
 		}
 
 		long palindrome = first;
-		long nextPalindrome = 0;
 		long prior = first;
+		long nextPalindrome = 0;
 		long sum = 0;
 		distancesSumList.clear();
 
 		while (true) {
 			nextPalindrome = palindrome + stepNumber(palindrome);
 			prior = palindrome;
-
-			if (digitSizeChange(palindrome, nextPalindrome)) {
-				palindrome += 2;
-			} else {
-				palindrome = nextCorrectPalindrome(palindrome, nextPalindrome);
-			}
-
+			palindrome = digitSizeChange(palindrome, nextPalindrome) ? palindrome + 2 : nextCorrectPalindrome(palindrome, nextPalindrome);
+	
 			if (palindrome > end) {
 				break;
 			}
