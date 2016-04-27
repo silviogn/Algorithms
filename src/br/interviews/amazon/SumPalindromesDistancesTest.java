@@ -24,7 +24,7 @@ public class SumPalindromesDistancesTest {
 	@Test 
 	public void callangeNumberQuestion(){
 		long time = System.currentTimeMillis();
-		long number = SumPalindromesDistances.newInstance().calculateDistances(1, 1000000000000000000L);
+		long number = SumPalindromesDistances.newInstance().calculateDistances(1, 1000000000000L);
 		time = System.currentTimeMillis() - time; 
 		System.out.println(number +" - "+time);
 	}	

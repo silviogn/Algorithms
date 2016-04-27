@@ -149,6 +149,7 @@ public class SumPalindromesDistances {
 				break;
 			}
 			sum += getSumDistaces(prior, palindrome);
+			//System.out.println(palindrome + " - 0"+String.valueOf(palindrome).length());
 		}
 		return sum;
 	}
