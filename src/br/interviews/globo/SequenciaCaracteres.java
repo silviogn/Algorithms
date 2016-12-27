@@ -2,10 +2,10 @@ package br.interviews.globo;
 
 public class SequenciaCaracteres {
 	// ======================
-	// ## Maior sequência de caracteres iguais
+	// ## Maior sequncia de caracteres iguais
 	// ======================
-	// Dada uma palavra, escreva um algoritmo que retorne a sequência de
-	// caracteres que mais aparecem em sequência.
+	// Dada uma palavra, escreva um algoritmo que retorne a sequï¿½ncia de
+	// caracteres que mais aparecem em sequï¿½ncia.
 	// Ex.: "Glooobbo.com", deve retornar "ooo".
 
 	public static void main(String[] args) {
