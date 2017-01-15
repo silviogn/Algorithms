@@ -2,8 +2,7 @@
     Problem:
     https://www.hackerrank.com/challenges/sherlock-and-array
 
-*/
-
+ */
 package br.hackerrank.sherlockarray;
 
 import java.util.Scanner;
@@ -101,7 +100,7 @@ public class SherlockArray {
                         r--;
                     }
                 }
-                
+
                 if (l <= (size - 1)) {
                     ll += data[l - 1];
                     lr -= l == (size - 1) ? 0 : data[l];
